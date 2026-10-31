@@ -1,6 +1,6 @@
 // Update these two values before publishing.
 // For privacy, only publish a phone number you are comfortable making public.
 window.PORTFOLIO_CONFIG = {
-  email: "YOUR_EMAIL@example.com",
-  whatsappNumber: "91XXXXXXXXXX" // Country code + number, digits only
+  email: "bussinessgirl360@gmail.com",
+  whatsappNumber: "91+7538857077" // Country code + number, digits only
 };
