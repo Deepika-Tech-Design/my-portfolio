@@ -1,30 +1,48 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Resume | Tech Girl</title>
+
 <link rel="stylesheet" href="style.css">
 
 <style>
-/* Resume Image Click */
-.resume-image-wrap {
+
+/* VIEW RESUME BUTTON */
+
+.resume-view-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: transparent;
+    border: 1px solid #00bfff;
+    color: #00bfff;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.resume-image-wrap img {
-    cursor: pointer;
+.resume-view-btn:hover {
+    background: #00bfff;
+    color: #000;
+    box-shadow: 0 0 20px #00bfff;
 }
 
-/* Full Screen Image Viewer */
+/* FULL SCREEN RESUME VIEWER */
+
 .resume-viewer {
     display: none;
     position: fixed;
     inset: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.96);
+    background: rgba(0, 0, 0, 0.97);
     z-index: 99999;
     justify-content: center;
     align-items: center;
@@ -38,17 +56,21 @@
 }
 
 .resume-viewer img {
-    max-width: 90%;
-    max-height: 78vh;
+    max-width: 95%;
+    max-height: 80vh;
     object-fit: contain;
     border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0, 170, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.3);
 }
+
+/* VIEWER BUTTONS */
 
 .viewer-actions {
     display: flex;
     gap: 15px;
     margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .viewer-btn {
@@ -70,16 +92,19 @@
     box-shadow: 0 0 20px #00bfff;
 }
 
+/* CLOSE BUTTON */
+
 .viewer-close {
     position: absolute;
-    top: 25px;
-    right: 35px;
+    top: 20px;
+    right: 30px;
     color: white;
-    font-size: 35px;
+    font-size: 38px;
     cursor: pointer;
     background: none;
     border: none;
 }
+
 </style>
 </head>
 
@@ -91,14 +116,25 @@
 
 <div class="portfolio-container">
 
+<!-- NAVBAR -->
+
 <nav class="navbar">
+
 <a href="index.html#home" class="logo">
+
 <span class="logo-star">✦</span>
-<span class="brand-stack">TECH GIRL <small>M.DEEPIKA</small></span>
+
+<span class="brand-stack">
+TECH GIRL
+<small>M.DEEPIKA</small>
+</span>
+
 <span class="logo-line"></span>
+
 </a>
 
 <ul class="nav-links">
+
 <li><a href="index.html#home">HOME</a></li>
 <li><a href="index.html#about">ABOUT</a></li>
 <li><a href="index.html#skills">SKILLS</a></li>
@@ -107,32 +143,44 @@
 <li><a href="certifications.html">CERTIFICATES</a></li>
 <li><a href="book.html">BOOK PROJECT</a></li>
 <li><a href="index.html#contact">CONTACT</a></li>
+
 </ul>
+
 </nav>
+
+<!-- MAIN CONTENT -->
 
 <main class="inner-main">
 
 <section class="section inner-section">
 
 <div class="section-heading">
+
 <p class="section-small">PROFILE & EXPERIENCE</p>
+
 <h1>My <span>Resume</span></h1>
+
 <div class="heading-line"></div>
+
 <p class="page-intro">
 A concise overview of my education, technical skills and project experience.
 </p>
+
 </div>
 
 <div class="resume-layout">
 
+<!-- RESUME PROFILE CARD -->
+
 <div class="glass-card resume-card">
 
-<!-- CLICKABLE RESUME IMAGE -->
-<div class="resume-image-wrap" onclick="openResume()">
+<div class="resume-image-wrap">
+
 <img
 src="assets/images/resume-profile.png"
-alt="Resume profile image – add your generated PNG here"
+alt="Resume profile image"
 >
+
 </div>
 
 <p class="section-small">FULL STACK DEVELOPER</p>
@@ -144,36 +192,69 @@ Integrated M.Tech Software Engineering student at VIT Chennai,
 aspiring to build creative and user-friendly digital solutions.
 </p>
 
+<!-- VIEW RESUME BUTTON -->
+
 <div class="resume-actions">
-<a class="btn primary"
+
+<button
+class="resume-view-btn"
+onclick="openResume()">
+
+<span>👁 VIEW RESUME</span>
+
+</button>
+
+</div>
+
+<!-- DOWNLOAD PDF -->
+
+<div class="resume-actions">
+
+<a
+class="btn primary"
 href="assets/resume/Deepika-Resume.pdf"
 download>
-<span>DOWNLOAD RESUME PDF</span>
+
+<span>⬇ DOWNLOAD RESUME PDF</span>
+
 </a>
+
 </div>
 
 </div>
+
+<!-- RESUME DETAILS -->
 
 <div class="resume-details">
 
 <div class="glass-card">
+
 <h3>Education</h3>
+
 <p><strong>VIT Chennai</strong></p>
+
 <p>Integrated M.Tech Software Engineering</p>
+
 <p>Expected graduation: 2030</p>
+
 </div>
 
 <div class="glass-card">
+
 <h3>Technical Skills</h3>
+
 <p>
 Java, Python, HTML5, CSS3, JavaScript, React.js,
 Tailwind CSS, TypeScript, Node.js, Flask, SQL,
 MySQL, Git, GitHub, VS Code and Canva.
 </p>
+
 </div>
 
 <div class="glass-card">
+
 <h3>Projects</h3>
+
 <p>
 <strong>MoneyMesh:</strong>
 FinTech personal finance dashboard prototype.
@@ -184,22 +265,29 @@ Contribution: frontend, backend and database integration.
 <strong>Personal Portfolio:</strong>
 Responsive website built using HTML, CSS and JavaScript.
 </p>
+
 </div>
 
 <div class="glass-card">
+
 <h3>Career Objective</h3>
+
 <p>
 To grow as a skilled Full Stack Developer and software engineer,
-continuously improve my technical skills and contribute to
-meaningful software projects.
+continuously improve my technical skills and contribute to meaningful software projects.
 </p>
+
 </div>
 
 </div>
+
 </div>
 
 </section>
+
 </main>
+
+<!-- FOOTER -->
 
 <footer class="footer">
 
@@ -210,11 +298,13 @@ meaningful software projects.
 <p>Building ideas. Creating experiences. Exploring technology.</p>
 
 <div class="footer-links">
+
 <a href="index.html">HOME</a>
 <a href="projects.html">PROJECTS</a>
 <a href="resume.html">RESUME</a>
 <a href="certifications.html">CERTIFICATES</a>
 <a href="book.html">BOOK PROJECT</a>
+
 </div>
 
 <div class="footer-line"></div>
@@ -222,61 +312,98 @@ meaningful software projects.
 <small>© 2026 TECH GIRL • M. DEEPIKA</small>
 
 </footer>
+
 </div>
 
-<!-- FULL SCREEN RESUME IMAGE VIEWER -->
+<!-- FULL SCREEN IMAGE VIEWER -->
+
 <div class="resume-viewer" id="resumeViewer">
 
-<button class="viewer-close" onclick="closeResume()" aria-label="Close">
+<button
+class="viewer-close"
+onclick="closeResume()"
+aria-label="Close">
+
 &times;
+
 </button>
 
 <img
 src="assets/images/resume-profile.png"
-alt="Full screen resume image"
+alt="Deepika Resume Full Screen"
 >
 
 <div class="viewer-actions">
+
+<!-- DOWNLOAD IMAGE -->
 
 <a
 href="assets/images/resume-profile.png"
 download="Deepika-Resume-Profile.png"
 class="viewer-btn">
+
 ⬇ DOWNLOAD IMAGE
+
 </a>
 
-<button class="viewer-btn" onclick="closeResume()">
+<!-- BACK BUTTON -->
+
+<button
+class="viewer-btn"
+onclick="closeResume()">
+
 ← BACK
+
 </button>
 
 </div>
 
 </div>
 
+<!-- JAVASCRIPT -->
+
 <script>
+
 function openResume() {
+
     document.getElementById("resumeViewer").classList.add("active");
+
     document.body.style.overflow = "hidden";
+
 }
 
 function closeResume() {
+
     document.getElementById("resumeViewer").classList.remove("active");
+
     document.body.style.overflow = "";
+
 }
 
-// Close when clicking outside the image
+// Click outside image to close
+
 document.getElementById("resumeViewer").addEventListener("click", function(event) {
+
     if (event.target === this) {
+
         closeResume();
+
     }
+
 });
 
-// Escape key to close
+// ESC key to close
+
 document.addEventListener("keydown", function(event) {
+
     if (event.key === "Escape") {
+
         closeResume();
+
     }
+
 });
+
 </script>
 
 <script src="script.js"></script>
